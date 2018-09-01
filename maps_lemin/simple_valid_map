@@ -1,0 +1,18 @@
+10
+##start
+room1 0 65
+room2 25 100
+room3 35 35
+room4 75 75
+room5 55 45
+room6 63 0
+##end
+room7 100 12
+room2-room1
+room3-room1
+room4-room2
+room5-room3
+room7-room4
+room6-room5
+room7-room6
+

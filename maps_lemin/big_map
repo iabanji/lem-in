@@ -1,0 +1,75 @@
+9
+##start
+Planet1 0 25
+Planet2 0 25
+Planet3 0 25
+Planet4 0 25
+Planet5 0 25
+Planet6 0 25
+Planet7 0 25
+Planet8 0 25
+Planet9 0 25
+Planet10 0 25
+Planet11 0 25
+Planet12 0 25
+##end
+Planet13 0 25
+Planet14 0 25
+Planet1-Planet2
+Planet2-Planet3
+Planet3-Planet14
+Planet14-Planet7
+Planet7-Planet11
+Planet7-Planet8
+Planet11-Planet12
+Planet12-Planet13
+Planet8-Planet10
+Planet8-Planet6
+Planet6-Planet4
+Planet1-Planet4
+Planet1-Planet5
+Planet4-Planet9
+Planet9-Planet13
+Planet10-Planet13
+Planet5-Planet9
+
+
+
+
+
+
+
+
+
+void	start_trafic(void)
+{
+	/*int i, j;
+	i = -1;*/
+	add_start_end();
+	count_rooms();
+	if (valid_connection() < 1)
+		exit(1);
+	if (g_rooms < 2)
+	{
+		ft_putstr("Rooms < 2\n");
+		return ;
+	}
+	/*printf("%d\n", g_rooms);
+	printf("%s\n", g_graf);
+	printf("%s\n", g_buf);
+	printf("%s\n", g_st);
+	printf("%s\n", g_end);*/
+	do_table();
+	ins_con_to_tab(g_st, 1, 0);
+	add_new_connect();
+	/*while (++i < g_rooms)
+	{
+		j = -1;
+		while (++j < g_rooms)
+			printf("%d  ", g_con[i][j]);
+		printf("\n");
+	}*/
+	search_min_road();
+	//printf("%s\n", g_min_road);
+	move_ants();
+}

@@ -1,0 +1,17 @@
+11
+##start
+room1 0 65
+room11 25 100
+room111 35 35
+room1111 75 75
+room11111 55 45
+room111111 63 0
+##end
+room1111111 100 12
+room1-room11
+room1-room111
+room11-room1111
+room111-room11111
+room1111-room1111111
+room11111-room111111
+room111111-room1111111
